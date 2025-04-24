@@ -13,6 +13,8 @@ WeatherApp/
 ├── components/ # UI components like Header, SearchBar, etc.
 ├── constant/
 ├── hooks/
+├── types/
+├── screens/
 ├── utils/ # Utility functions (e.g., fetchWeatherByCity)
 ├── App.tsx # Main application component
 ├── .env.example # API key placeholder
