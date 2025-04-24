@@ -57,10 +57,9 @@ npm install
 ```
 
 3. **Set Up Environment Variables**
-   Create a `.env` file:
 
-```env
-VITE_WEATHER_API_KEY=your_api_key_here
+```constant
+WEATHER_API_KEY=your_api_key_here
 ```
 
 4. **Run the App**
@@ -138,10 +137,4 @@ const response = await getCurrentWeather(city, unit);
 ## 📦 Deployment
 
 - Deploy with **Vercel** or **Netlify**
-- Add environment variable `VITE_WEATHER_API_KEY` in your deployment settings
-
----
-
-## 📄 License
-
-MIT License © 2025 [Your Name]
+- Add environment variable `WEATHER_API_KEY` in your deployment settings
