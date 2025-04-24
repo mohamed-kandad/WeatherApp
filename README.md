@@ -15,7 +15,6 @@ WeatherApp/
 ├── hooks/
 ├── utils/ # Utility functions (e.g., fetchWeatherByCity)
 ├── App.tsx # Main application component
-├── src/
 ├── .env.example # API key placeholder
 ├── tailwind.config.js # TailwindCSS configuration
 ├── vite.config.ts # Vite build config
