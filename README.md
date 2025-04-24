@@ -41,10 +41,12 @@ WeatherApp/
 
 ## Set Up Environment Variables
 
+```
 in file `constant` file:
+WEATHER_API_KEY=your_api_key_here
+```
 
 ````
-WEATHER_API_KEY=your_api_key_here
 
 ## 🛠️ Installation
 
