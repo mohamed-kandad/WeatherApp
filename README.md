@@ -7,7 +7,7 @@ A modern, responsive weather dashboard built with **React**, **TypeScript**, **T
 ## 📁 Project Structure
 
 ```
-react-weather-app/
+WeatherApp/
 ├── public/                  # Static files
 ├── src/
 │   ├── assets/              # Icons, images, etc.
@@ -43,8 +43,8 @@ react-weather-app/
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/react-weather-app.git
-cd react-weather-app
+git clone https://github.com/yourusername/WeatherApp.git
+cd WeatherApp
 ```
 
 2. **Install Dependencies**
