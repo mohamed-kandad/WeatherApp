@@ -1,126 +1,32 @@
-# 🌦️ React Weather App Documentation
+# 🌤️ React Native Weather App
 
-A modern, responsive weather dashboard built with **React**, **TypeScript**, **Tailwind CSS**, and the **OpenWeatherMap API**. This documentation covers setup, development, structure, features, and deployment instructions.
-
----
-
-## 📁 Project Structure
-
-```
-WeatherApp/
-├── public/                  # Static files
-├── src/
-│   ├── assets/              # Icons, images, etc.
-│   ├── components/          # UI components like Header, SearchBar, etc.
-│   ├── hooks/               # Custom React hooks (e.g., useWeather)
-│   ├── services/            # API service layer
-│   ├── utils/               # Utility functions (e.g., formatDate)
-│   ├── App.tsx              # Main application component
-│   └── main.tsx             # Entry point
-├── .env.example             # API key placeholder
-├── tailwind.config.js       # TailwindCSS configuration
-├── vite.config.ts           # Vite build config
-├── package.json             # Dependencies and scripts
-├── tsconfig.json            # TypeScript configuration
-└── README.md                # Project overview
-```
+A simple and beautiful mobile weather application built using **React Native CLI**, **TypeScript**, and **React Navigation**. It fetches real-time weather data and forecasts from the [OpenWeatherMap API](https://openweathermap.org/api).
 
 ---
 
-## 🔧 Features
+## 📱 Features
 
-- ✅ Current weather by city name
-- ✅ 5-day forecast display with icons
-- ✅ Toggle between Celsius (°C) and Fahrenheit (°F)
-- ✅ Responsive UI for all screen sizes
-- ✅ Graceful error handling (e.g., invalid city input)
-- ✅ Loading states and skeleton loaders
+- 🔍 Search for weather by **city name**
+- 🌡️ View **current weather** (temperature, condition, icon)
+- 📆 View a basic **forecast** (next few hours)
+- 📶 Handles API loading and error states gracefully
+- 🧠 State management using `useState`
+- 🧭 Navigation using React Navigation (Stack)
+- 💅 Clean and responsive UI
 
 ---
 
-## ⚙️ Setup Instructions
-
-1. **Clone the Repository**
+## 🛠️ Installation
 
 ```bash
-git clone https://github.com/yourusername/WeatherApp.git
-cd WeatherApp
-```
+# Clone the repository
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
 
-2. **Install Dependencies**
-
-```bash
+# Install dependencies
 npm install
+
+# Run the app
+npx react-native run-android  # for Android
+npx react-native run-ios      # for iOS
 ```
-
-3. **Set Up Environment Variables**
-
-```constant
-WEATHER_API_KEY=your_api_key_here
-```
-
-4. **Run the App**
-
-```bash
-npm run dev
-```
-
-5. **Build for Production**
-
-```bash
-npm run build
-```
-
----
-
-## 🌐 API Integration
-
-- Uses **OpenWeatherMap API** for weather data.
-- All API calls are handled in `src/services/weatherAPI.ts`.
-- Example usage:
-
-```ts
-const response = await fetchWeatherByCity(city);
-```
-
----
-
-## 🎨 UI & Responsiveness
-
-- Built with **Tailwind CSS** using mobile-first design.
-- Breakpoints for `sm`, `md`, `lg`, and `xl`.
-- Includes components like `SearchBar`, `Toggle`, and `ForecastList`.
-
----
-
-## 📈 Performance
-
-- Debounced input to avoid excessive API calls
-- Lazy-loaded components using `React.lazy`
-- Memoized components for optimized re-renders
-- Efficient error boundaries and retry logic
-
----
-
-## 🧠 AI Tool Usage
-
-- **ChatGPT** was used to assist in:
-  - Code organization suggestions
-  - Boilerplate generation
-  - Documentation formatting
-  - Error message phrasing
-- All code was reviewed and adapted manually.
-
----
-
-## 🧪 Testing (Optional Enhancements)
-
-- Add `Jest` for unit testing
-- Use `React Testing Library` for component testing
-
----
-
-## 📦 Deployment
-
-- Deploy with **Vercel** or **Netlify**
-- Add environment variable `WEATHER_API_KEY` in your deployment settings
