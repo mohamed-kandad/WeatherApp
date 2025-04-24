@@ -4,11 +4,6 @@ A simple and beautiful mobile weather application built using **React Native CLI
 
 ---
 
-## Project Structure
-
-```
----
-
 ## 📁 Project Structure
 
 ```
@@ -30,7 +25,7 @@ WeatherApp/
 ├── tsconfig.json # TypeScript configuration
 └── README.md # Project overview
 
-````
+```
 
 ## 📱 Features
 
@@ -57,4 +52,4 @@ npm install
 # Run the app
 npx react-native run-android  # for Android
 npx react-native run-ios      # for iOS
-````
+```
