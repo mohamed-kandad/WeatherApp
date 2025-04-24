@@ -80,7 +80,7 @@ npm run build
 - Example usage:
 
 ```ts
-const response = await getCurrentWeather(city, unit);
+const response = await fetchWeatherByCity(city);
 ```
 
 ---
@@ -89,7 +89,7 @@ const response = await getCurrentWeather(city, unit);
 
 - Built with **Tailwind CSS** using mobile-first design.
 - Breakpoints for `sm`, `md`, `lg`, and `xl`.
-- Includes components like `Card`, `SearchBar`, `Toggle`, and `ForecastItem`.
+- Includes components like `SearchBar`, `Toggle`, and `ForecastList`.
 
 ---
 
