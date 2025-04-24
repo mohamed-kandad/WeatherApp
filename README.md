@@ -113,17 +113,6 @@ const response = await fetchWeatherByCity(city);
 
 ---
 
-## 📝 README Content
-
-- Setup instructions
-- Features
-- Tech stack
-- Deployment
-- AI tool acknowledgment
-- Screenshots (add manually)
-
----
-
 ## 🧪 Testing (Optional Enhancements)
 
 - Add `Jest` for unit testing
