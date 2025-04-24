@@ -10,14 +10,12 @@ A simple and beautiful mobile weather application built using **React Native CLI
 
 WeatherApp/
 ├── public/ # Static files
+├── components/ # UI components like Header, SearchBar, etc.
+├── constant/
+├── hooks/
+├── utils/ # Utility functions (e.g., fetchWeatherByCity)
+├── App.tsx # Main application component
 ├── src/
-│ ├── assets/ # Icons, images, etc.
-│ ├── components/ # UI components like Header, SearchBar, etc.
-│ ├── hooks/ # Custom React hooks (e.g., useWeather)
-│ ├── services/ # API service layer
-│ ├── utils/ # Utility functions (e.g., formatDate)
-│ ├── App.tsx # Main application component
-│ └── main.tsx # Entry point
 ├── .env.example # API key placeholder
 ├── tailwind.config.js # TailwindCSS configuration
 ├── vite.config.ts # Vite build config
