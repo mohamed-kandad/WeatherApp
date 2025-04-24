@@ -12,9 +12,6 @@ react-weather-app/
 ├── src/
 │   ├── assets/              # Icons, images, etc.
 │   ├── components/          # UI components like Header, SearchBar, etc.
-│   ├── features/
-│   │   ├── current/         # Current weather logic & UI
-│   │   └── forecast/        # 5-day forecast logic & UI
 │   ├── hooks/               # Custom React hooks (e.g., useWeather)
 │   ├── services/            # API service layer
 │   ├── utils/               # Utility functions (e.g., formatDate)
