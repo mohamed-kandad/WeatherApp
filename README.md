@@ -39,18 +39,17 @@ WeatherApp/
 
 ---
 
+```
 ## Set Up Environment Variables
 
-```
 in file `constant` file:
 WEATHER_API_KEY=your_api_key_here
 ```
 
-````
+```
 
 ## 🛠️ Installation
 
-```bash
 # Clone the repository
 git clone https://github.com/mohamed-kandad/WeatherApp
 cd weather-app
@@ -61,4 +60,4 @@ npm install
 # Run the app
 npx react-native run-android  # for Android
 npx react-native run-ios      # for iOS
-````
+```
