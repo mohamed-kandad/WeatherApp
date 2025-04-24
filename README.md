@@ -1,97 +1,147 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🌦️ React Weather App Documentation
 
-# Getting Started
+A modern, responsive weather dashboard built with **React**, **TypeScript**, **Tailwind CSS**, and the **OpenWeatherMap API**. This documentation covers setup, development, structure, features, and deployment instructions.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📁 Project Structure
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```
+react-weather-app/
+├── public/                  # Static files
+├── src/
+│   ├── assets/              # Icons, images, etc.
+│   ├── components/          # UI components like Header, SearchBar, etc.
+│   ├── features/
+│   │   ├── current/         # Current weather logic & UI
+│   │   └── forecast/        # 5-day forecast logic & UI
+│   ├── hooks/               # Custom React hooks (e.g., useWeather)
+│   ├── services/            # API service layer
+│   ├── utils/               # Utility functions (e.g., formatDate)
+│   ├── App.tsx              # Main application component
+│   └── main.tsx             # Entry point
+├── .env.example             # API key placeholder
+├── tailwind.config.js       # TailwindCSS configuration
+├── vite.config.ts           # Vite build config
+├── package.json             # Dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+└── README.md                # Project overview
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🔧 Features
 
-### Android
+- ✅ Current weather by city name
+- ✅ 5-day forecast display with icons
+- ✅ Toggle between Celsius (°C) and Fahrenheit (°F)
+- ✅ Responsive UI for all screen sizes
+- ✅ Graceful error handling (e.g., invalid city input)
+- ✅ Loading states and skeleton loaders
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
+## ⚙️ Setup Instructions
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/react-weather-app.git
+cd react-weather-app
 ```
 
-### iOS
+2. **Install Dependencies**
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npm install
 ```
 
-Then, and every time you update your native dependencies, run:
+3. **Set Up Environment Variables**
+   Create a `.env` file:
 
-```sh
-bundle exec pod install
+```env
+VITE_WEATHER_API_KEY=your_api_key_here
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+4. **Run the App**
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+npm run dev
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+5. **Build for Production**
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+npm run build
+```
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 🌐 API Integration
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- Uses **OpenWeatherMap API** for weather data.
+- All API calls are handled in `src/services/weatherAPI.ts`.
+- Example usage:
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+```ts
+const response = await getCurrentWeather(city, unit);
+```
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 🎨 UI & Responsiveness
 
-You've successfully run and modified your React Native App. :partying_face:
+- Built with **Tailwind CSS** using mobile-first design.
+- Breakpoints for `sm`, `md`, `lg`, and `xl`.
+- Includes components like `Card`, `SearchBar`, `Toggle`, and `ForecastItem`.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📈 Performance
 
-# Troubleshooting
+- Debounced input to avoid excessive API calls
+- Lazy-loaded components using `React.lazy`
+- Memoized components for optimized re-renders
+- Efficient error boundaries and retry logic
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 🧠 AI Tool Usage
 
-To learn more about React Native, take a look at the following resources:
+- **ChatGPT** was used to assist in:
+  - Code organization suggestions
+  - Boilerplate generation
+  - Documentation formatting
+  - Error message phrasing
+- All code was reviewed and adapted manually.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+
+## 📝 README Content
+
+- Setup instructions
+- Features
+- Tech stack
+- Deployment
+- AI tool acknowledgment
+- Screenshots (add manually)
+
+---
+
+## 🧪 Testing (Optional Enhancements)
+
+- Add `Jest` for unit testing
+- Use `React Testing Library` for component testing
+
+---
+
+## 📦 Deployment
+
+- Deploy with **Vercel** or **Netlify**
+- Add environment variable `VITE_WEATHER_API_KEY` in your deployment settings
+
+---
+
+## 📄 License
+
+MIT License © 2025 [Your Name]
